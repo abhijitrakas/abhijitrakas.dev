@@ -1,0 +1,46 @@
+import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
+import SiteBranding from './site-branding';
+import Img from 'gatsby-image';
+
+/*
+ * This component is built using `gatsby-image` to automatically serve optimized
+ * images with lazy loading and reduced file sizes. The image is loaded using a
+ * `useStaticQuery`, which allows us to load the image from directly within this
+ * component, rather than having to pass the image data down from pages.
+ *
+ * For more information, see the docs:
+ * - `gatsby-image`: https://gatsby.dev/gatsby-image
+ * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
+ */
+
+const HeaderImage = ({ siteData, isHome } ) => {
+	const data = useStaticQuery(graphql`
+	query {
+	  placeholderImage: file(relativePath: { eq: "header.jpg" }) {
+		childImageSharp {
+		  fluid(maxWidth:2000) {
+			...GatsbyImageSharpFluid
+		  }
+		}
+	  }
+	}
+  `)
+
+	let navMargin = 'nav-btm-margin';
+
+	if ( isHome ) {
+		navMargin = '';
+	}
+
+	return (
+		<div className={`custom-header ${ navMargin }`}>
+			<div className="custom-header-image">
+				<Img fluid={data.placeholderImage.childImageSharp.fluid} style={{ position: 'unset'}} />
+			</div>
+			<SiteBranding siteTitle={siteData.title} siteDescription={siteData.description} />
+		</div>
+	);
+}
+
+export default HeaderImage;
