@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://abhijitrakas.dev/sitemap.xml
+Host: https://abhijitrakas.dev
