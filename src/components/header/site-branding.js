@@ -13,11 +13,11 @@ const SiteBranding = ( { siteTitle, siteDescription } ) => {
 		<div className="site-branding">
 			<div className="wrap">
 				<div className="site-branding-text">
-					{ siteTitle && <h1 className="site-title">
-						<Link to="/">
+					{ siteTitle && <Link to="/">
+						<h1 className="site-title">
 							{ siteTitle }
-						</Link>
-					</h1> }
+						</h1>
+					</Link> }
 					{ siteDescription && <p className="site-description">
 						{ siteDescription }
 					</p> }

@@ -15,7 +15,7 @@ export default function Template({
 				<div className="blog-post">
 					<h1>
 						{frontmatter.title}
-						<div className="blog-post-meta">Author: {frontmatter.author} | Posted Date: {frontmatter.date}</div>
+						<div className="blog-post-meta">Author: {frontmatter.author} | Posted on: {frontmatter.date}</div>
 					</h1>
 					<div
 						className="blog-post-content"

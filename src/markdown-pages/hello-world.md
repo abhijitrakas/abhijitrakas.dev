@@ -11,7 +11,7 @@ author: Abhijit Rakas
 
 <p>This is my blog and I will try to share new things whatever I will learn. 🤞</p>
 
-<p>Nowadays during this lockdown period, I am mostly learning JavaScript. So you can expect more blog posts related to JS.</p>
+<p>Nowadays during this lockdown period, I am mostly learning JavaScript. So you can expect blog posts related to JS.</p>
 
 <p>That's it for now. Thank you for your attention. 🙏</p>
 
